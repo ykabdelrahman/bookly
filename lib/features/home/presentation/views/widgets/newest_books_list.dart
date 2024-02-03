@@ -1,8 +1,8 @@
 import 'package:bookly/features/home/presentation/view_model/newest_books_cubit/newest_books_cubit.dart';
 import 'package:bookly/features/home/presentation/views/widgets/book_info.dart';
+import 'package:bookly/features/home/presentation/views/widgets/shimmer_newest_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../../../core/widgets/custom_circular_indicator.dart';
 import '../../../../../core/widgets/custom_error_msg.dart';
 
 class NewestBooksList extends StatelessWidget {
@@ -29,7 +29,7 @@ class NewestBooksList extends StatelessWidget {
             },
           );
         }
-        return const CustomCircularIndicator();
+        return const ShimmerNewestList();
       },
     );
   }

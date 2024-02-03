@@ -1,7 +1,7 @@
-import 'package:bookly/core/widgets/custom_circular_indicator.dart';
 import 'package:bookly/core/widgets/custom_error_msg.dart';
 import 'package:bookly/features/home/presentation/view_model/featured_book_cubit/featured_books_cubit.dart';
 import 'package:bookly/features/home/presentation/views/widgets/book_item.dart';
+import 'package:bookly/features/home/presentation/views/widgets/shimmer_items_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -34,7 +34,7 @@ class ItemsList extends StatelessWidget {
             ),
           );
         }
-        return const CustomCircularIndicator();
+        return const ShimmerItemsList();
       },
     );
   }
