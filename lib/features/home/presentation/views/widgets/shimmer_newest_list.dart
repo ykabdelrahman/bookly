@@ -10,6 +10,7 @@ class ShimmerNewestList extends StatelessWidget {
     return ListView.separated(
       separatorBuilder: (context, index) => const SizedBox(height: 20),
       physics: const NeverScrollableScrollPhysics(),
+      padding: EdgeInsets.zero,
       shrinkWrap: true,
       itemCount: 5,
       itemBuilder: (context, index) {
