@@ -13,7 +13,7 @@ class NewestBooksList extends StatelessWidget {
     return BlocBuilder<NewestBooksCubit, NewestBooksState>(
       builder: (context, state) {
         if (state is NewestBooksFailure) {
-          return CustomErrorMsg(errorMsg: state.errorMessage);
+          return const CustomErrorMsg(errorMsg: '');
         }
         if (state is NewestBooksSuccess) {
           return ListView.separated(

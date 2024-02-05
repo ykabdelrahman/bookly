@@ -14,7 +14,15 @@ class ItemsList extends StatelessWidget {
     return BlocBuilder<FeaturedBooksCubit, FeaturedBooksState>(
       builder: (context, state) {
         if (state is FeaturedBooksFailure) {
-          return CustomErrorMsg(errorMsg: state.errorMessage);
+          return SizedBox(
+            height: MediaQuery.of(context).size.height * .3,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                CustomErrorMsg(errorMsg: state.errorMessage),
+              ],
+            ),
+          );
         }
         if (state is FeaturedBooksSuccess) {
           return SizedBox(
