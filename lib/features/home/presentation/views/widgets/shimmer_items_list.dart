@@ -7,7 +7,7 @@ class ShimmerItemsList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: MediaQuery.of(context).size.height * .3,
+      height: MediaQuery.of(context).size.height * .25,
       child: ListView.separated(
         physics: const NeverScrollableScrollPhysics(),
         scrollDirection: Axis.horizontal,
@@ -35,7 +35,7 @@ class ShimmerItem extends StatelessWidget {
       child: ClipRRect(
         borderRadius: BorderRadius.circular(16),
         child: AspectRatio(
-          aspectRatio: 2.8 / 3.8,
+          aspectRatio: 2.4 / 3.4,
           child: Container(color: Colors.white),
         ),
       ),

@@ -3,6 +3,7 @@ import 'package:bookly/features/home/data/models/book_model/book_model.dart';
 import 'package:bookly/features/home/presentation/views/widgets/book_item.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import '../../../../../core/routes/routes.dart';
 
 class BookInfo extends StatelessWidget {
   const BookInfo({
@@ -14,9 +15,9 @@ class BookInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => GoRouter.of(context).push('/b', extra: bookModel),
+      onTap: () => context.push(Routes.bookDetails, extra: bookModel),
       child: SizedBox(
-        height: 120,
+        height: MediaQuery.of(context).size.height * .15,
         child: Row(
           children: [
             BookItem(

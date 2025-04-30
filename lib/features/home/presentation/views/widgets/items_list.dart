@@ -5,6 +5,7 @@ import 'package:bookly/features/home/presentation/views/widgets/shimmer_items_li
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import '../../../../../core/routes/routes.dart';
 
 class ItemsList extends StatelessWidget {
   const ItemsList({super.key});
@@ -15,7 +16,7 @@ class ItemsList extends StatelessWidget {
       builder: (context, state) {
         if (state is FeaturedBooksFailure) {
           return SizedBox(
-            height: MediaQuery.of(context).size.height * .3,
+            height: MediaQuery.of(context).size.height * .25,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -26,7 +27,7 @@ class ItemsList extends StatelessWidget {
         }
         if (state is FeaturedBooksSuccess) {
           return SizedBox(
-            height: MediaQuery.of(context).size.height * .3,
+            height: MediaQuery.of(context).size.height * .25,
             child: ListView.separated(
               physics: const BouncingScrollPhysics(),
               scrollDirection: Axis.horizontal,
@@ -34,8 +35,8 @@ class ItemsList extends StatelessWidget {
               itemCount: state.books.length,
               itemBuilder: (context, index) {
                 return BookItem(
-                  onTap: () => GoRouter.of(context)
-                      .push('/b', extra: state.books[index]),
+                  onTap: () => context.push(Routes.bookDetails,
+                      extra: state.books[index]),
                   imgUrl: state.books[index].volumeInfo!.imageLinks!.thumbnail!,
                 );
               },

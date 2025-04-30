@@ -19,10 +19,9 @@ class CustomTextField extends StatelessWidget {
       cursorColor: Colors.white,
       decoration: InputDecoration(
         prefixIcon: const Icon(Icons.search),
-        prefixIconColor: MaterialStateColor.resolveWith(
-          (states) => states.contains(MaterialState.focused)
-              ? Colors.grey
-              : Colors.white,
+        prefixIconColor: WidgetStateColor.resolveWith(
+          (states) =>
+              states.contains(WidgetState.focused) ? Colors.grey : Colors.white,
         ),
         hintText: 'Search for a book..',
         focusedBorder: borderStyle(),

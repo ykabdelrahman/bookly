@@ -30,7 +30,9 @@ class _SplashViewState extends State<SplashView> {
 
   void navigateToHome() {
     Future.delayed(const Duration(seconds: 3), () {
-      GoRouter.of(context).pushReplacement('/h');
+      if (mounted) {
+        context.go('/h');
+      }
     });
   }
 }

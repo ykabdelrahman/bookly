@@ -14,9 +14,9 @@ class ShimmerNewestList extends StatelessWidget {
       shrinkWrap: true,
       itemCount: 5,
       itemBuilder: (context, index) {
-        return const SizedBox(
-          height: 120,
-          child: Row(
+        return SizedBox(
+          height: MediaQuery.of(context).size.height * .15,
+          child: const Row(
             children: [
               ShimmerItem(),
               SizedBox(width: 30),

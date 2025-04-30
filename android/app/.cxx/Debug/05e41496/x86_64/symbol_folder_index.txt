@@ -1,0 +1,1 @@
+/home/duhhh/Documents/GitHub/bookly/build/app/intermediates/cxx/Debug/05e41496/obj/x86_64

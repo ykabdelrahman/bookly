@@ -1,0 +1,2 @@
+/home/duhhh/Documents/GitHub/bookly/android/app/.cxx/Debug/05e41496/x86_64/CMakeFiles/edit_cache.dir
+/home/duhhh/Documents/GitHub/bookly/android/app/.cxx/Debug/05e41496/x86_64/CMakeFiles/rebuild_cache.dir

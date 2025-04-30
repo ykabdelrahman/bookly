@@ -6,6 +6,7 @@ import 'package:bookly/features/home/presentation/views/widgets/items_list.dart'
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import '../../../../core/routes/routes.dart';
 import '../../../../core/utils/assets.dart';
 import '../view_model/featured_book_cubit/featured_books_cubit.dart';
 
@@ -40,7 +41,7 @@ class HomeView extends StatelessWidget {
                           height: 20,
                         ),
                         icon: Icons.search,
-                        onPresssed: () => GoRouter.of(context).push('/s'),
+                        onPresssed: () => context.push(Routes.search),
                       ),
                       const ItemsList(),
                       const SizedBox(height: 36),
