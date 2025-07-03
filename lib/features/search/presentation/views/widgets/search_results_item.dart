@@ -1,6 +1,7 @@
 import 'package:bookly/features/home/data/models/book_model/book_model.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import '../../../../../core/routes/routes.dart';
 import '../../../../../core/utils/styles.dart';
 import '../../../../home/presentation/views/widgets/book_item.dart';
 
@@ -10,7 +11,8 @@ class SearchResultsItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => GoRouter.of(context).push('/b', extra: bookModel),
+      onTap: () =>
+          GoRouter.of(context).push(Routes.bookDetails, extra: bookModel),
       child: SizedBox(
         height: 100,
         child: Row(
