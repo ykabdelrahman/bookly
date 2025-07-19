@@ -1,16 +1,58 @@
-# bookly
+## Bookshelf
+A mobile app for managing and tracking books, including reading status and user reviews.
 
-A new Flutter project.
 
-## Getting Started
+## Preview
 
-This project is a starting point for a Flutter application.
+<img width="2329" height="1535" alt="Group 10" src="https://github.com/user-attachments/assets/f3a940cf-e1ef-4a64-9c91-6a89e8ce78ba" />
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 🚀 Getting Started
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+To run this project on your local machine:
+
+```bash
+# Clone the repo
+git clone https://github.com/ykabdelrahman/bookly.git
+cd bookly
+
+# Get dependencies
+flutter pub get
+
+# Run the app
+flutter run
+```
+
+
+## App Architecture and Folder Structure
+
+#### Folder Structure
+
+```
+lib 
+ ├── src
+    ├── core
+    │   ├── utils
+    │   ├── func
+    │   ├── widgets
+    │   ├── errors
+    │   ├── routes
+    ├── features
+    │   ├── home
+    │   ├── search
+    │   ├── onboarding
+    ├── app.dart
+    ├── main.dart
+```
+
+## 🧪 Running Tests
+
+```
+$ flutter test
+```
+
+## 🤝 Contributions
+Contributions are welcome! Please **fork the repository** and submit a **pull request** for any improvements or new features.
+
+## 📜 License
+This project is licensed under the **MIT License**.
